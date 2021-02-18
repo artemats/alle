@@ -1,0 +1,43 @@
+.left{
+    &-2{
+        &-title{
+          text-align: center;
+        }
+        &-preview{
+          margin: 0 auto;
+          max-width: 280px;
+          width: 100%;
+            @include max-height-min-width(700, 991){
+              max-width: 230px;
+            }
+            @include max-height-min-width(650, 991){
+              max-width: 180px;
+            }
+        }
+        &-description{
+          max-width: 420px;
+        }
+        &-action{
+
+        }
+    }
+}
+
+.right{
+    &-2{
+        &-preview{
+          margin: 0 auto;
+          max-width: 520px;
+            @include max-height-min-width(700, 991){
+              max-width: 480px;
+            }
+            @include max-height-min-width(650, 991){
+              max-width: 420px;
+            }
+            @include d(991){
+              padding-bottom: 30px;
+              margin-top: 30px;
+            }
+        }
+    }
+}

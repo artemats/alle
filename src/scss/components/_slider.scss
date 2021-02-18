@@ -1,0 +1,128 @@
+.ms {
+  &-section {
+    background-color: #FFFFFF;
+    min-height: 100vh;
+      @include d(991){
+        padding: 0 30px;
+      }
+  }
+  &-left {
+    &-1 {
+      background-color: #C1D0F4;
+        .ms-content{
+          @include d(991){
+            padding-top: 100px;
+          }
+        }
+    }
+    &-2 {
+      background-color: #FEF3DA;
+    }
+    &-4{
+      .ms-bg{
+        @include d(991){
+          position: absolute;
+          height: 100%;
+        }
+      }
+    }
+    &-5 {
+      background-color: #C1D0F4;
+    }
+    &-6 {
+      .ms-bg {
+          @include m(992){
+            background-position: center bottom -10px;
+          }
+          @include d(991){
+            background-size: contain;
+            height: 110vw;
+          }
+      }
+    }
+    .right-mobile{
+      position: relative;
+        @include m(992){
+          display: none;
+        }
+    }
+  }
+  &-right {
+    &-3 {
+      background-color: #C1D0F4;
+    }
+    &-6 {
+      background-color: #FDE8B8;
+    }
+    &-7 {
+      background-color: #FEF9ED;
+    }
+    @include d(991){
+      display: none;
+    }
+  }
+
+  &-content {
+    padding: 100px 30px 20px;
+    position: relative;
+      @include d(991){
+        min-height: 100vh;
+        padding: 20px 0;
+      }
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      @include d(991){
+        position: relative;
+        height: 100vh;
+        margin: 0 -30px;
+      }
+  }
+
+  &-tableCell {
+    position: relative;
+  }
+
+  &-btn {
+    border: none;
+    background-color: $blue;
+    color: #FFFFFF;
+    padding: 3px 20px;
+    @extend .font-title;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color .4s ease, color .4s ease;
+
+    &.__white {
+      background-color: #FFFFFF;
+      color: $blue;
+      @include hover(991) {
+        &:hover {
+          background-color: $blue;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  &-value {
+    font-size: 38px;
+    color: $blue;
+    font-weight: 600;
+    line-height: 1em;
+    display: inline-block;
+    position: relative;
+    bottom: -2px;
+      @include max-height-min-width(650, 991){
+        font-size: 32px;
+      }
+  }
+}

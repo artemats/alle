@@ -1,0 +1,200 @@
+html, body{
+  @include d(991){
+    overflow: initial;
+  }
+}
+
+body{
+  @extend .font-regular;
+}
+
+#multiscroll {
+  h1 {
+    text-transform: initial;
+    font-size: 60px;
+    line-height: 1.03em;
+    margin: 25px 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+      @include max-height-min-width(700, 991){
+        font-size: 46px;
+      }
+      @include max-height-min-width(650, 991){
+        font-size: 38px;
+        margin: 15px 0;
+      }
+      @include d(991){
+        font-size: 52px;
+      }
+      @include d(480){
+        font-size: 50px;
+      }
+  }
+  h2 {
+    text-transform: initial;
+    font-size: 40px;
+    line-height: 1.03em;
+    margin: 25px 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+      @include max-height-min-width(700, 991){
+        font-size: 32px;
+      }
+      @include max-height-min-width(650, 991){
+        margin: 15px 0;
+      }
+  }
+  h3 {
+    text-transform: initial;
+    font-size: 28px;
+    line-height: 1.03em;
+    margin: 25px 0;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+      @include max-height-min-width(650, 991){
+        margin: 15px 0;
+      }
+  }
+  h4{
+    font-size: 28px;
+      @include max-height-min-width(700, 991){
+        font-size: 22px;
+      }
+      @include max-height-min-width(650, 991){
+        font-size: 20px;
+      }
+      @include d(480){
+        font-size: 20px;
+      }
+  }
+}
+
+.title{
+  @extend .font-title, .font-title-bold;
+  color: $blue;
+  text-align: center;
+}
+
+.description{
+  max-width: 550px;
+  margin: 0 auto;
+  color: $blue;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+    &.__bg{
+      max-width: 320px;
+      padding: 20px 10px;
+        &:before{
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: -25px;
+          right: -25px;
+          bottom: -5px;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-position: center;
+          background-image: url(../img/4/Graskarton_Kasten.png);
+          pointer-events: none;
+        }
+        p{
+          line-height: 1.2em;
+        }
+    }
+    p{
+      position: relative;
+    }
+    @include max-height-min-width(660, 991){
+      font-size: 12px;
+        p{
+          font-size: inherit;
+        }
+    }
+}
+
+.h{
+    &-1{
+      @extend h1;
+    }
+    &-2{
+      @extend h2;
+    }
+    &-3{
+      @extend h3;
+    }
+    &-4{
+      @extend h4;
+    }
+}
+.action{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    &-icon{
+      width: 50px;
+      min-width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      display: inline-block;
+        @include max-height-min-width(700, 991){
+          width: 42px;
+          min-width: 42px;
+          height: 42px;
+        }
+        @include max-height-min-width(650, 991){
+          width: 38px;
+          min-width: 38px;
+          height: 38px;
+        }
+    }
+    &-content{
+      .h-4{
+        line-height: 1em;
+      }
+    }
+    &-part{
+      max-width: 180px;
+      text-align: center;
+        &-image{
+          height: 86px;
+          width: 160px;
+          margin: 0 auto;
+          position: relative;
+          pointer-events: none;
+            img{
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              max-width: 100%;
+            }
+            @include d(480){
+              width: 140px;
+              height: 75px;
+            }
+        }
+        &-title{
+          font-size: 14px;
+          color: $blue;
+          line-height: 1em;
+        }
+        &.__left{
+          .action-part-title{
+            padding-left: 65px;
+          }
+        }
+        &.__right{
+          .action-part{
+              &-image{
+                img{
+                  top: -10px;
+                }
+              }
+              &-title{
+                padding-right: 65px;
+              }
+          }
+        }
+    }
+}

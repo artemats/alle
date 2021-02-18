@@ -1,0 +1,12 @@
+.font{
+  &-regular{
+    font-family: 'PT Sans', sans-serif;
+  }
+  &-title{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 400;
+      &-bold{
+        font-weight: 700;
+      }
+  }
+}

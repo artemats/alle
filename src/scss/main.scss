@@ -1,0 +1,20 @@
+*{
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+@import "../libs/jquery.multiscroll.css";
+@import "base/colors";
+@import "base/mixins";
+@import "base/classes";
+
+@import "sections/1";
+@import "sections/2";
+@import "sections/3";
+@import "sections/4";
+@import "sections/5";
+@import "sections/6";
+@import "sections/7";
+@import "components/slider";
+@import "components/app";

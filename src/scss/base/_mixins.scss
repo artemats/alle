@@ -1,0 +1,38 @@
+// DESKTOP WIDTH //
+@mixin d($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+// PHONE WIDTH //
+@mixin m($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content;
+  }
+}
+// DESKTOP HEIGHT //
+@mixin dh($height) {
+  @media only screen and (max-height: $height + "px") {
+    @content;
+  }
+}
+// PHONE HEIGHT //
+@mixin mh($height) {
+  @media only screen and (min-height: $height + "px") {
+    @content;
+  }
+}
+
+// PHONE WIDTH, DESKTOP HEIGHT //
+@mixin max-height-min-width($height, $width) {
+  @media only screen and (max-height: $height + "px") and (min-width: $width + "px") {
+    @content;
+  }
+}
+
+// HOVERS //
+@mixin hover($width) {
+  @media only screen and (min-width: $width + "px"), (any-hover: hover) {
+    @content;
+  }
+}

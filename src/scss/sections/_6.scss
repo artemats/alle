@@ -1,0 +1,17 @@
+.right{
+    &-6{
+        &-preview{
+          margin: 0 auto;
+          max-width: 90px;
+            @include max-height-min-width(650, 991){
+              max-width: 80px;
+            }
+            @include d(991){
+              margin-top: 50px;
+            }
+        }
+        &-action{
+          margin-top: 20px;
+        }
+    }
+}

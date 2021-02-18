@@ -1,0 +1,35 @@
+.left{
+    &-4{
+        &-preview{
+          margin: 0 auto;
+          max-width: 350px;
+            @include max-height-min-width(700, 991){
+              max-width: 300px;
+            }
+            @include max-height-min-width(650, 991){
+              max-width: 280px;
+            }
+        }
+    }
+}
+
+.right{
+    &-4{
+      &-preview{
+        max-width: 200px;
+        margin: 0 auto 20px;
+          @include max-height-min-width(700, 991){
+            max-width: 160px;
+          }
+          @include max-height-min-width(650, 991){
+            max-width: 140px;
+          }
+      }
+      &-action{
+        margin-top: 20px;
+          @include max-height-min-width(700, 991){
+            margin-top: 10px;
+          }
+      }
+    }
+}

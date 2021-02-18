@@ -1,0 +1,34 @@
+.left{
+    &-5{
+        &-detail{
+          max-width: 480px;
+          margin: 0 auto;
+            p{
+              &:nth-child(1){
+                padding-left: 50px;
+                text-align: center;
+              }
+              &:nth-child(2){
+                padding-right: 50px;
+              }
+            }
+        }
+        &-action{
+          margin-top: 20px;
+        }
+        &-more{
+          text-align: center;
+          font-size: 14px;
+          @extend .font-title, .font-title-bold;
+          color: $blue;
+          margin-top: 20px;
+            p{
+              font-family: inherit;
+              margin: 0;
+            }
+            @include max-height-min-width(650, 991){
+              font-size: 12px;
+            }
+        }
+    }
+}

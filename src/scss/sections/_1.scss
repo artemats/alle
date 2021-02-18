@@ -1,0 +1,61 @@
+.left{
+    &-1{
+        &-image{
+          max-width: 480px;
+          margin: 0 auto;
+            @include max-height-min-width(700, 991){
+              max-width: 360px;
+            }
+            @include max-height-min-width(650, 991){
+              max-width: 320px;
+            }
+        }
+        &-title{
+          text-align: center;
+        }
+        &-action{
+          max-width: 320px;
+          margin: 0 auto;
+            .title{
+              text-align: left;
+            }
+            @include hover(991){
+              &:hover{
+                .cls-3{
+                  fill: #2F3583;
+                }
+              }
+            }
+            @include max-height-min-width(700, 991){
+              max-width: 270px;
+            }
+            @include max-height-min-width(650, 991){
+              max-width: 240px;
+            }
+            @include d(480){
+              max-width: 260px;
+            }
+        }
+    }
+}
+
+.right{
+    &-1{
+        &-logo{
+          position: absolute;
+          left: 50%;
+          top: 20%;
+          transform: translateX(-50%);
+          max-width: 165px;
+          width: 100%;
+            @include d(480){
+              max-width: 120px;
+            }
+        }
+    }
+}
+
+.cls-3{
+  fill: #938fc0;
+  transition: fill .4s ease;
+}
